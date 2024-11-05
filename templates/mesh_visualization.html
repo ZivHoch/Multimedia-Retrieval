@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesh Visualization</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #007acc;
+        margin-bottom: 30px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .original,
+      .similar {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .original h2,
+      .similar h2 {
+        color: #007acc;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #007acc;
+        padding-bottom: 10px;
+      }
+
+      .plot-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .plot-item {
+        width: calc(50% - 20px); /* Two plots per row with spacing */
+        text-align: center;
+        border-radius: 8px;
+        padding: 10px; /* Added padding for better spacing */
+        margin-bottom: 20px; /* Space between rows */
+        background-color: #007acc; /* Background color for visibility */
+        color: white; /* Text color */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 600px; /* Increased height to accommodate larger plots */
+      }
+
+      /* Media Query for Responsive Design */
+      @media (max-width: 768px) {
+        .plot-item {
+          width: calc(100% - 20px); /* Full width on smaller screens */
+          height: auto; /* Allow height to adjust on smaller screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Top 5 Similar Meshes</h1>
+    <div class="container">
+      <div class="original">
+        <h2>Original Object</h2>
+        <div id="original-plot" style="width: 100%; height: 400px">{{ original_plot | safe }}</div>
+      </div>
+      <div class="similar">
+        <h2>Similar Objects</h2>
+        <div class="plot-container">
+          {% for plot_html, obj_id, dist in similar_plots %}
+          <div class="plot-item">
+            <h3>{{ obj_id }}</h3>
+            <div id="plot-{{ loop.index }}" style="width: 100%; height: 300px">{{ plot_html | safe }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
