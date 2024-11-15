@@ -72,6 +72,8 @@ Before running the project, ensure you have the following installed:
    pip install -r req.txt
    ```
 
+## Project Report
+- `Multimedia_Retrieval_report_Hochman_Psara_Andikopoulos.pdf`: The project report contains detailed descriptions of all the steps outlined in the implementation section, including objectives, results, and conclusions.
 
 
 
