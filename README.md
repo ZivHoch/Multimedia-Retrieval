@@ -77,7 +77,7 @@ After running the first cell (which includes the necessary imports for the proje
 
 
 ## Project Report
-- `Multimedia_Retrieval_report_Hochman_Psara_Andikopoulos.pdf`: The project report contains detailed descriptions of all the steps outlined in the implementation section, including objectives, results, and conclusions.
+- `Multimedia_Retrieval_2024_Panagiotis_Andrikopoulos_Stylianos_Psara_Ziv_Hochman.pdf`: The project report contains detailed descriptions of all the steps outlined in the implementation section, including objectives, results, and conclusions.
 
 
 
