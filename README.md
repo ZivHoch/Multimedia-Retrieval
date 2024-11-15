@@ -61,8 +61,8 @@ Before running the project, ensure you have the following installed:
 - Required Python libraries (listed in `req.txt`).
 - 3D shape datasets in OBJ or PLY format.
 
-### Setup Instruction: Replace NGROK Token:
-After executing the first cell (which includes the necessary imports for the project), make sure to replace the NGROK token with your own. This is required to run the project on your machine.
+### Setup Instructions for Using the GUI (Steps 4 and 5): Replace NGROK Token
+After running the first cell (which includes the necessary imports for the project), replace the NGROK token with your own. This step is required to ensure the project runs correctly on your machine.
 
 ### Installation
 1. Clone the repository:
