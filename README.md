@@ -61,6 +61,9 @@ Before running the project, ensure you have the following installed:
 - Required Python libraries (listed in `req.txt`).
 - 3D shape datasets in OBJ or PLY format.
 
+### Setup Instructions for Using the GUI (Steps 4 and 5): Replace NGROK Token
+After running the first cell (which includes the necessary imports for the project), replace the NGROK token with your own. This step is required to ensure the project runs correctly on your machine.
+
 ### Installation
 1. Clone the repository:
    ```bash
@@ -71,6 +74,7 @@ Before running the project, ensure you have the following installed:
    ```bash
    pip install -r req.txt
    ```
+
 
 ## Project Report
 - `Multimedia_Retrieval_report_Hochman_Psara_Andikopoulos.pdf`: The project report contains detailed descriptions of all the steps outlined in the implementation section, including objectives, results, and conclusions.
